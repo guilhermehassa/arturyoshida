@@ -92,3 +92,21 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+// Permitir upload de SVG
+function permitir_upload_svg($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'permitir_upload_svg');
+
+// Allow SVG medias
+function allowSvgMedias($data, $file, $filename, $mimes) {
+    $ext = isset($data['ext']) ? $data['ext'] : '';
+    if ($ext === 'svg') {
+        $data['type'] = 'image/svg+xml';
+        $data['ext']  = 'svg';
+    }
+    return $data;
+}
+add_filter('wp_check_filetype_and_ext', 'allowSvgMedias', 10, 4);

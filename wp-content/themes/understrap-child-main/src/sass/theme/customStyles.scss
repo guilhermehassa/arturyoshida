@@ -1,12 +1,17 @@
 html{
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-padding-top: $headerHeight;
   
   body{
     background-color: $cinza;
 
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+  }
+  
+  main{
+    margin-top: $headerHeight;
   }
 
   .defaultButton{
@@ -21,14 +26,15 @@ html{
     letter-spacing: 1px;
     line-height: 90%;
   }
-
-  
   
   .header{
     height: $headerHeight;
     display: flex;
     align-items: center;
-    position: relative;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
     background-color: $cinza;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.17);
   
@@ -201,6 +207,43 @@ html{
         text-align: center;
       }
     }
+  }
+
+  .about{
+    padding: 32px 0;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+      padding: 48px 0;
+    }
+
+    &_title{
+      text-align: center;
+      margin-bottom: 1rem;
+      
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+        position: sticky;
+        height: fit-content;
+        top: calc($headerHeight + 1rem);
+      }
+      img{
+        margin-top: 20px;
+        max-width: 80%; height: auto;
+      }
+    }
+
+    &_text{
+      text-align: center;
+
+      @include media-breakpoint-up(lg) {
+        text-align: left;
+      }
+      *{
+        color: $preto;
+      }
+    }
+
   }
 }
 

@@ -8,6 +8,21 @@ html{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
   }
+
+  .defaultButton{
+    width: fit-content;
+    display: block;
+    padding: 8px 12px;
+    background-color: $azul2;
+    color: $cinza;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 90%;
+  }
+
+  
   
   .header{
     height: $headerHeight;
@@ -156,6 +171,34 @@ html{
         }
   
         
+      }
+    }
+  }
+
+  .hero{
+    padding: 80px 0;
+    background-image: url('../img/hero_bg.jpg');
+    text-align: center;
+    background-position: center;
+
+    @include media-breakpoint-up(lg) {
+      padding: 120px 0;
+    }
+
+    .defaultButton{
+      margin: auto;
+      margin-top: 80px;
+      
+      @include media-breakpoint-up(lg) {
+        margin-top: 120px;
+      }
+    }
+
+    h1{
+      color: $azul1;
+
+      @include media-breakpoint-up(lg) {
+        text-align: center;
       }
     }
   }

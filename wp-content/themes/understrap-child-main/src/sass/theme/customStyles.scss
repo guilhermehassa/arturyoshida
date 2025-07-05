@@ -230,6 +230,11 @@ html{
       img{
         margin-top: 20px;
         max-width: 80%; height: auto;
+
+        @include media-breakpoint-up(lg) {
+          max-width: 100%;
+          width: 100%;
+        }
       }
     }
 

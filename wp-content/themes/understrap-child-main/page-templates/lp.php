@@ -25,7 +25,7 @@ get_header();
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-10 col-lg-3 about_title">
-          <h2>Quem é<br>Artur Yoshida?</h2>
+          <h2 class="h1">Quem é<br>Artur Yoshida?</h2>
           <img src="<?= get_stylesheet_directory_uri();?>/img/arturyoshida.png" alt="">
         </div>
         <div class="col-12 col-lg-8 offset-lg-1 about_text">

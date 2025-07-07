@@ -81,6 +81,20 @@ get_header();
       </div>
     </div>
   </section>
+  <section class="break">
+    <div class="container">
+      <div class="row justify-content-center justify-content-lg-start">
+        <div class="col-10 col-lg-8">
+          <h5 class="h6">
+            Ter um advogado é como ter um anjo da guarda real. Ele vai te proteger, defender sua vontade e te aconselhar da melhor forma possível.
+          </h5>
+          <h6>
+            Artur Yoshida
+          </h6>
+        </div>
+      </div>
+    </div>
+  </section>
   
 </main>
 

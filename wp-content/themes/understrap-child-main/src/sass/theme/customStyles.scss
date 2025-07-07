@@ -250,5 +250,42 @@ html{
     }
 
   }
+
+  .break{
+    background-image: url('../img/break.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    
+    @include media-breakpoint-up(lg) {
+      padding: 200px 0;
+      background-position: center;
+    }
+
+    h5{
+      color: $cinza;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+
+    h6:not(.h6){
+      margin:0;
+      margin-top: 16px;
+      color: $cinza;
+      font-weight: 400;
+
+      font-style: italic;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 28px;
+        margin-top: 24px;
+        text-align: center;
+      }
+    }
+
+  }
 }
 

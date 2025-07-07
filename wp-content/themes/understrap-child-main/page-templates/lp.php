@@ -95,6 +95,31 @@ get_header();
       </div>
     </div>
   </section>
+  <section class="expertises">
+    <div class="container">
+      <div class="row justify-content-center justify-content-lg-between">
+        <div class="col-12 mb-4 mg-lg-5">
+          <h2 class="text-center">Áreas de Atuação</h2>
+        </div>
+        <?php for ($i=0; $i < 3; $i++) : ?>
+          <div class="col-10 col-lg-6 expertises_card">
+            <div class="expertises_card__title">
+              <i class="fa-solid fa-scale-balanced"></i>
+              <h3 class="h5">Inventário e Herança</h3>
+            </div>
+            <div class="expertises_card__content">
+              <p>
+                Se um familiar falece, oriento famílias na divisão dos bens. Atuação em inventários feitos em cartório ou pela Justiça. Cuido de todo o processo: desde a reunião da documentação até a finalização da partilha. Também esclareço dúvidas sobre quem tem direito à herança e como os bens podem ser divididos.
+              </p>
+            </div>
+            <a href="#vamosconversar?" class="defaultButton">
+              FALAR SOBRE ESTE ASSUNTO
+            </a>
+          </div>
+        <?php endfor; ?>
+      </div>
+    </div>
+  </section>
   
 </main>
 

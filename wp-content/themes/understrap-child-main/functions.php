@@ -93,6 +93,17 @@ function understrap_child_customize_controls_js() {
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
+function add_fontawesome_cdn() {
+    // Remove Font Awesome local do tema pai, se necessário
+    wp_dequeue_style( 'font-awesome' );
+    wp_deregister_style( 'font-awesome' );
+
+    // Adiciona o CDN do Font Awesome 6 (ou a versão desejada)
+    wp_enqueue_style( 'font-awesome-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css', array(), '6.5.0' );
+}
+add_action( 'wp_enqueue_scripts', 'add_fontawesome_cdn', 20 );
+
+
 // Permitir upload de SVG
 function permitir_upload_svg($mimes) {
     $mimes['svg'] = 'image/svg+xml';

@@ -332,5 +332,49 @@ html{
     }
 
   }
+
+  .testimonials{
+    padding: 48px 0;
+
+    .swiper{
+      overflow: visible;
+    }
+
+    .item{
+      background-color: $azul1;
+      border-radius: 20px;
+      padding: 16px;
+      width: 320px;
+      height: 190px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include media-breakpoint-up(lg) {
+        width: 370px;
+        height: 220px;
+        padding: 24px;
+      }
+
+      p{
+        font-style: italic;
+        @include media-breakpoint-up(lg) {
+          font-size: 18px;
+        }
+      }
+
+      &_title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3{
+          margin: 0;
+          color: $preto;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
 }
 

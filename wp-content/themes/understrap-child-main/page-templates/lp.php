@@ -95,7 +95,7 @@ get_header();
       </div>
     </div>
   </section>
-  <section class="expertises">
+  <section class="expertises" id="areasdeatuacao">
     <div class="container">
       <div class="row justify-content-center justify-content-lg-between">
         <div class="col-12 mb-4 mg-lg-5">
@@ -120,7 +120,7 @@ get_header();
       </div>
     </div>
   </section>
-  <section class="testimonials">
+  <section class="testimonials" id="relatosdeclientes">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center mb-3 mb-lg-5">
@@ -149,7 +149,7 @@ get_header();
       </div>
     </div>
   </section>
-  <section class="contact">
+  <section class="contact" id="vamosconversar">
     <div class="container">
       <div class="row justify-content-center" id="vamosconversar">
         <div class="col-10 col-lg-4 contact_title">

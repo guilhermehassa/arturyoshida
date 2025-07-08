@@ -121,3 +121,5 @@ function allowSvgMedias($data, $file, $filename, $mimes) {
     return $data;
 }
 add_filter('wp_check_filetype_and_ext', 'allowSvgMedias', 10, 4);
+
+add_filter('wpcf7_autop_or_not', '__return_false');

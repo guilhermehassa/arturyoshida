@@ -66,25 +66,25 @@ $bootstrap_version = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4'
 					<ul class="list-unstyled header_nav__socials">
 						<li>
 							<a href="" target="_blank" rel="noopener noreferrer">
-								<i class="fa fa-whatsapp"></i>
+								<i class="fa-brands fa-whatsapp"></i>
 								(13) 99722-4404
 							</a>
 						</li>
 						<li>
 							<a href="https://www.linkedin.com/in/arturyoshida/" target="_blank" rel="noopener noreferrer">
-								<i class="fa fa-linkedin"></i>
+								<i class="fa-brands fa-linkedin"></i>
 								/artur-yoshida-327915287
 							</a>
 						</li>
 						<li>
 							<a href="https://www.instagram.com/arturyoshida/" target="_blank" rel="noopener noreferrer">
-								<i class="fa fa-instagram"></i>
+								<i class="fa-brands fa-instagram"></i>
 								_arturyoshida
 							</a>
 						</li>
 						<li>
 							<a href="mailto:contato@arturyoshida.adv.br" target="_blank" rel="noopener noreferrer">
-								<i class="fa fa-envelope"></i>
+								<i class="fa-solid fa-envelope"></i>
 								contato@arturyoshida.adv.br
 							</a>
 						</li>	

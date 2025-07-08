@@ -110,6 +110,13 @@ html{
           gap: 6px !important;
         }
         li{
+          i{
+            color: $azul1;
+
+            @include media-breakpoint-up(lg){
+              color: $preto;
+            }
+          }
           a{
             border-bottom: none !important;
             font-size: 10px !important;
@@ -459,6 +466,35 @@ html{
       }
       .defaultButton{
         width: 100%;
+      }
+    }
+  }
+
+  .footer{
+    background-color: $preto;
+    color: $cinza !important;
+    text-align: center;
+
+    img{
+      filter: brightness(0) invert(1);
+      padding: 32px 0;
+      max-width: 176px;
+      margin: auto;
+    }
+
+    ul{
+      li{
+        a{
+          color: #ffffff;
+          text-decoration: none;
+          margin-bottom: 8px;
+          font-size: 10px;
+
+          i{
+            color: #ffffff;
+            margin-right: 4px;
+          }
+        }
       }
     }
   }

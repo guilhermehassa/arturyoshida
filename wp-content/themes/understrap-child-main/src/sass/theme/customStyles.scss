@@ -28,6 +28,49 @@ html{
     letter-spacing: 1px;
     line-height: 90%;
   }
+
+  .floatButton-whatsapp{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #03BA39;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    a{
+      text-decoration: none;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i{
+        font-size: 32px;
+        color: $cinza;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 40px;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 80px;
+      height: 80px;
+
+      a span{
+        display: block; // Show text on larger screens
+        margin-left: 8px;
+        font-size: 14px;
+      }
+    }
+  }
   
   .header{
     height: $headerHeight;

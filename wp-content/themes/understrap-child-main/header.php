@@ -100,5 +100,11 @@ $bootstrap_version = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4'
 			</div>
 		</div>
 	</header>
+
+	<div class="floatButton-whatsapp">
+		<a href="https://api.whatsapp.com/send?phone=5513997224404" target="_blank" rel="noopener noreferrer">
+			<i class="fa-brands fa-whatsapp"></i>
+		</a>
+	</div>
 	<div class="site" id="page">
 

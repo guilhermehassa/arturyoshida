@@ -63,31 +63,34 @@ $bootstrap_version = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4'
 						</li>
 					</ul>
 
+					<?php
+					// Busca os contatos do CPT 'contact', ordenando pelo campo ACF 'priority' (do maior para o menor)
+					$contacts_args = array(
+					    'post_type'      => 'contact',
+					    'posts_per_page' => -1,
+					    'post_status'    => 'publish',
+					    'meta_key'       => 'priority',
+					    'orderby'        => 'meta_value_num',
+					    'order'          => 'DESC',
+					);
+					$contacts_query = new WP_Query($contacts_args);
+					?>
+
 					<ul class="list-unstyled header_nav__socials">
-						<li>
-							<a href="" target="_blank" rel="noopener noreferrer">
-								<i class="fa-brands fa-whatsapp"></i>
-								(13) 99722-4404
-							</a>
-						</li>
-						<li>
-							<a href="https://www.linkedin.com/in/arturyoshida/" target="_blank" rel="noopener noreferrer">
-								<i class="fa-brands fa-linkedin"></i>
-								/artur-yoshida-327915287
-							</a>
-						</li>
-						<li>
-							<a href="https://www.instagram.com/arturyoshida/" target="_blank" rel="noopener noreferrer">
-								<i class="fa-brands fa-instagram"></i>
-								_arturyoshida
-							</a>
-						</li>
-						<li>
-							<a href="mailto:contato@arturyoshida.adv.br" target="_blank" rel="noopener noreferrer">
-								<i class="fa-solid fa-envelope"></i>
-								contato@arturyoshida.adv.br
-							</a>
-						</li>	
+						<?php if ($contacts_query->have_posts()) : ?>
+							<?php while ($contacts_query->have_posts()) : $contacts_query->the_post(); ?>
+								<?php
+									$icon = get_field('icon'); 
+									$link = get_field('link');  
+								?>
+								<li>
+									<a href="<?= esc_url($link['url']); ?>" target="<?= esc_url($link['target']); ?>" rel="noopener noreferrer">
+										<i class="<?= esc_attr($icon); ?>"></i>
+										<?= esc_html($link['title']); ?>
+									</a>
+								</li>
+							<?php endwhile; wp_reset_postdata(); ?>
+						<?php endif; ?>
 					</ul>
 				</nav>
 				

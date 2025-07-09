@@ -124,3 +124,10 @@ add_filter('wp_check_filetype_and_ext', 'allowSvgMedias', 10, 4);
 
 add_filter('wpcf7_autop_or_not', '__return_false');
 
+function remover_menu_contact_para_editor() {
+    if (current_user_can('editor')) {
+        remove_menu_page('wpcf7'); // Remove a aba "Contact" do Contact Form 7
+    }
+}
+add_action('admin_menu', 'remover_menu_contact_para_editor', 999);
+
